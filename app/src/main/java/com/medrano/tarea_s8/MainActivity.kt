@@ -25,6 +25,20 @@ class MainActivity : ComponentActivity() {
 }
 
 
+@Composable
+fun TopAppBar(modifier: Modifier = Modifier) {
+    var showMenu by remember { mutableStateOf(false) }
+    var selectedOption by remember { mutableStateOf("Inicio") }
+
+    Scaffold(
+        topBar = {
+            
+        }
+    ){  }
+    
+}
+
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
