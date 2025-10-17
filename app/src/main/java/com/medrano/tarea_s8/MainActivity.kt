@@ -95,9 +95,3 @@ fun MiCajeroVirtualApp() {
         }
     }
 }
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-}
