@@ -33,7 +33,7 @@ fun MiCajeroVirtualApp() {
     val navController = rememberNavController()
     var mostrarMenu by remember { mutableStateOf(false) }  // control simple del menú
 
-    Scaffold (
+    Scaffold(
         topBar = {
             TopAppBar(title = {Text("Mi Cajero Virtual")})
         },
