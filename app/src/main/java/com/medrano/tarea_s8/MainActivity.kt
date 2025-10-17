@@ -93,8 +93,7 @@ fun MiCajeroVirtualApp() {
                 composable("acerca") { AboutMeScreen() }
             }
         }
-    ){  }
-    
+    }
 }
 
 
