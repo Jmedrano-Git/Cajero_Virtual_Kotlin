@@ -2,7 +2,7 @@ package com.medrano.tarea_s8.ui.theme
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Color
 
 private val PurplePrimary = Color(0xFF4C3BCF)
 private val PurpleLight = Color(0xFFE6E1FF)
