@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CajeroApp() {
+fun MiCajeroVirtualApp() {
     var saldo by remember { mutableStateOf(0.0) }
     val historial = remember { mutableStateListOf<String>() }
 
