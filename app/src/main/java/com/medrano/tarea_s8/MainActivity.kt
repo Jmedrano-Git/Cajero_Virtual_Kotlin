@@ -17,7 +17,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Tarea_S8Theme {
+            CajeroVirtualTheme {
+                MiCajeroVirtualApp()
             }
         }
     }
