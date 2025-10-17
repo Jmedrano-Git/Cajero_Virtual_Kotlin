@@ -35,6 +35,15 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+fun CajeroApp() {
+    var saldo by remember { mutableStateOf(0.0) }
+    val historial = remember { mutableStateListOf<String>() }
+
+    val navController = rememberNavController()
+    
+}
+
 
 @Preview(showBackground = true)
 @Composable
