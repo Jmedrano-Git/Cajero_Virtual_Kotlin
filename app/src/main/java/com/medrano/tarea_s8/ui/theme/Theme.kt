@@ -39,8 +39,8 @@ fun Tarea_S8Theme(
     }
 
     MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
+        colorScheme = AppColorScheme,
+        typography = Typography(),
         content = content
     )
 }
