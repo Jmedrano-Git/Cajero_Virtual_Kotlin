@@ -41,6 +41,47 @@ fun CajeroApp() {
     val historial = remember { mutableStateListOf<String>() }
 
     val navController = rememberNavController()
+
+    Scaffold (
+        topBar = {
+            TopAppBar(title = {Text("Mi Cajero Virtual")})
+        },
+        bottomBar = {
+            NavigationBar {
+                //Item de Navegación de Home
+                NavigationBarItem(
+                    selected = false,
+                    onClick = {navController.navigate("home")},
+                    label = {Text("Inicio")},
+                    icon = {}
+                )
+
+                //Item de Navegación de Operaciones
+                NavigationBarItem(
+                    selected = false,
+                    onClick = { navController.navigate("operaciones") },
+                    label = { Text("Operaciones") },
+                    icon = {}
+                )
+
+                //Item de navegación de Historial
+                NavigationBarItem(
+                    selected = false,
+                    onClick = { navController.navigate("historial") },
+                    label = { Text("Historial") },
+                    icon = {}
+                )
+
+                //Item de navegación de Acerca De
+                NavigationBarItem(
+                    selected = false,
+                    onClick = { navController.navigate("about") },
+                    label = { Text("Acerca de") },
+                    icon = {}
+                )
+            }
+        }
+    ){  }
     
 }
 
