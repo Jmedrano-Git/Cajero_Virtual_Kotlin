@@ -13,11 +13,12 @@ private val AccentRed = Color(0xFFD50000)
 private val AppColorScheme = lightColorScheme(
     primary = PurplePrimary,
     onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    secondary = PurpleLight,
+    onSecondary = Color.Black,
+    surface = Color(0xFFF8F6FF),
+    onSurface = Color.Black,
+    error = AccentRed,
+    tertiary = AccentGreen
 )
 
 @Composable
