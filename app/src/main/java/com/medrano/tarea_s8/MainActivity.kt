@@ -24,6 +24,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CajeroApp() {
     var saldo by remember { mutableStateOf(0.0) }
