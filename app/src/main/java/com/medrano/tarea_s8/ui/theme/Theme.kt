@@ -4,11 +4,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
-)
+private val PurplePrimary = Color(0xFF4C3BCF)
+private val PurpleLight = Color(0xFFE6E1FF)
+private val PurpleDark = Color(0xFF3A2BA2)
+private val AccentGreen = Color(0xFF00C853)
+private val AccentRed = Color(0xFFD50000)
 
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
