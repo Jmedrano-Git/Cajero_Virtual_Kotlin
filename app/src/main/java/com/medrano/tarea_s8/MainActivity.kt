@@ -9,7 +9,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
 import androidx.navigation.compose.*
 import com.medrano.tarea_s8.Views.*
 import com.medrano.tarea_s8.ui.theme.CajeroVirtualTheme
