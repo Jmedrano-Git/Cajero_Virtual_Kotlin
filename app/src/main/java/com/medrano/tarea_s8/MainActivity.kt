@@ -35,41 +35,62 @@ fun MiCajeroVirtualApp() {
 
     Scaffold(
         topBar = {
-            TopAppBar(title = {Text("Mi Cajero Virtual")})
-        },
-        bottomBar = {
-            NavigationBar {
-                //Item de Navegación de Home
-                NavigationBarItem(
-                    selected = false,
-                    onClick = {navController.navigate("home")},
-                    label = {Text("Inicio")},
-                    icon = {}
-                )
+            TopAppBar(
+                title = { Text("Mi Cajero Virtual") },
+                actions = {
+                    IconButton(onClick = { mostrarMenu = !mostrarMenu }) {
+                        Icon(Icons.Default.MoreVert, contentDescription = "Menú")
+                    }
 
-                //Item de Navegación de Operaciones
-                NavigationBarItem(
-                    selected = false,
-                    onClick = { navController.navigate("operaciones") },
-                    label = { Text("Operaciones") },
-                    icon = {}
-                )
-
-                //Item de navegación de Historial
-                NavigationBarItem(
-                    selected = false,
-                    onClick = { navController.navigate("historial") },
-                    label = { Text("Historial") },
-                    icon = {}
-                )
-
-                //Item de navegación de Acerca De
-                NavigationBarItem(
-                    selected = false,
-                    onClick = { navController.navigate("about") },
-                    label = { Text("Acerca de") },
-                    icon = {}
-                )
+                    if (mostrarMenu) {
+                        DropdownMenu(
+                            expanded = true,
+                            onDismissRequest = { mostrarMenu = false }
+                        ) {
+                            DropdownMenuItem(
+                                text = { Text("Inicio") },
+                                onClick = {
+                                    navController.navigate("inicio")
+                                    mostrarMenu = false
+                                },
+                                leadingIcon = { Icon(Icons.Default.Home, contentDescription = null) }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("Operaciones") },
+                                onClick = {
+                                    navController.navigate("operaciones")
+                                    mostrarMenu = false
+                                },
+                                leadingIcon = { Icon(Icons.Default.AccountCircle, contentDescription = null) }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("Historial") },
+                                onClick = {
+                                    navController.navigate("historial")
+                                    mostrarMenu = false
+                                },
+                                leadingIcon = { Icon(Icons.Default.MoreVert, contentDescription = null) }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("Acerca de") },
+                                onClick = {
+                                    navController.navigate("acerca")
+                                    mostrarMenu = false
+                                },
+                                leadingIcon = { Icon(Icons.Default.Info, contentDescription = null) }
+                            )
+                        }
+                    }
+                }
+            )
+        }
+    ) {
+        Box {
+            NavHost(navController, startDestination = "inicio") {
+                composable("inicio") { HomeScreen(saldo, navController) }
+                composable("operaciones") { OperationsScreen(saldo, { saldo = it }, historial) }
+                composable("historial") { HistorialScreen(historial) }
+                composable("acerca") { AboutMeScreen() }
             }
         }
     ){  }
