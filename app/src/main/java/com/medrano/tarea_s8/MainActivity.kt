@@ -31,6 +31,7 @@ fun MiCajeroVirtualApp() {
     var saldo by remember { mutableStateOf(0.0) }
     val historial = remember { mutableStateListOf<String>() }
     val navController = rememberNavController()
+    var mostrarMenu by remember { mutableStateOf(false) }  // control simple del menú
 
     Scaffold (
         topBar = {
